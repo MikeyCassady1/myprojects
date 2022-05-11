@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIImageViewChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oTL-3W-yDy">
+                                <rect key="frame" x="-2" y="297" width="386" height="31"/>
+                                <connections>
+                                    <action selector="whenSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="RbH-pU-Zk5"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move the Slider Left and Right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzM-tj-Lvf">
+                                <rect key="frame" x="92.666666666666686" y="437.66666666666669" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aA-We-dMe">
+                                <rect key="frame" x="97" y="136" width="222" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <state key="normal" title="Change Me "/>
+                                <connections>
+                                    <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KN-FL-R65"/>
+                                    <action selector="changeMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTb-9q-Zxu"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Binary" translatesAutoresizingMaskIntoConstraints="NO" id="pDJ-L4-wEm">
+                                <rect key="frame" x="86" y="391" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oTL-3W-yDy" secondAttribute="trailing" constant="16" id="4V6-TH-bsu"/>
+                            <constraint firstItem="lzM-tj-Lvf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CWI-Js-hNc"/>
+                            <constraint firstItem="lzM-tj-Lvf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNI-kx-4Zy"/>
+                            <constraint firstItem="lzM-tj-Lvf" firstAttribute="top" secondItem="oTL-3W-yDy" secondAttribute="bottom" constant="25" id="mxi-1a-1DU"/>
+                            <constraint firstItem="oTL-3W-yDy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wMg-12-6IS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeMeButton" destination="7aA-We-dMe" id="Wub-N2-eya"/>
+                        <outlet property="disappearingImageView" destination="pDJ-L4-wEm" id="BAv-uN-R3E"/>
+                        <outlet property="slider" destination="oTL-3W-yDy" id="OlC-2T-6mg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113.04347826086958" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Binary" width="2560" height="1200"/>
+    </resources>
+</document>
